@@ -47,7 +47,7 @@ def main():
     result = calculate_normalised_wet_composition(moisture_frac, elemental_percent_dry)
 
     # === Output ===
-    print("\n Wet Composition (% by mass):")
+    print("\n Wet composition (% by mass):")
     for element, wt_pct in sorted(result.items(), key=lambda x: -x[1]):
         print(f"  {element:>4s}: {wt_pct:7.3f} %")
 
