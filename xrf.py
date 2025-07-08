@@ -30,7 +30,7 @@ def main():
     # === Load Data ===
     try:
         xrf_df = pd.read_csv("xrf_wt_percent_dry.csv")
-        oxide_wt_percent = xrf_df.set_index("Element")["XRF_wt_percent_dry"].to_dict()
+        oxide_wt_percent = xrf_df.set_index("Element_Oxide")["XRF_oxide_percent_dry"].to_dict()
 
         ratio_df = pd.read_csv("element_to_oxide_ratios.csv")
         conversion_ratios = ratio_df.set_index("Element")["ElementToOxideRatio"].to_dict()
